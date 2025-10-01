@@ -1,5 +1,5 @@
 import React from "react";
-import "./loginpage.css"; // keep your CSS here
+import "./loginpage.css"; 
 
 function StudentLogin() {
   return (
