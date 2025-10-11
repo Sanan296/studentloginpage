@@ -1,0 +1,10 @@
+.about-page {
+  text-align: center;
+  padding: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-page h1 {
+  color: #00bcd4;
+  margin-bottom: 20px;
+}

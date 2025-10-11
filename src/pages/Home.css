@@ -1,0 +1,12 @@
+.home-container {
+  text-align: center;
+  background-color: #f2f6ff;
+  min-height: 100vh;
+  padding-top: 80px;
+  font-family: "Poppins", sans-serif;
+}
+
+.home-container h1 {
+  color: #00bcd4;
+  margin-bottom: 40px;
+}

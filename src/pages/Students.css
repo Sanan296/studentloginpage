@@ -1,0 +1,49 @@
+.students-page {
+  text-align: center;
+  padding: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.students-table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.students-table th, .students-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.students-table th {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.view-btn, .delete-btn {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-btn {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.delete-btn {
+  background-color: crimson;
+  color: white;
+}
+.view-btn:hover {
+  background-color: #009bbf;
+}
+.delete-btn:hover {
+  background-color: darkred;
+}
+.students-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
