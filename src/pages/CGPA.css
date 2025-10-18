@@ -1,0 +1,91 @@
+.cgpa-page {
+  text-align: center;
+  padding: 50px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f2f6ff, #e7f7ff);
+  min-height: 100vh;
+}
+
+.cgpa-page h2 {
+  color: #00bcd4;
+  margin-bottom: 25px;
+}
+
+/* Subject rows */
+.subjects-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.subject-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subject-row select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.cgpa-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.add-btn,
+.calc-btn,
+.remove-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  color: white;
+}
+
+/* Add button */
+.add-btn {
+  background-color: #00bcd4;
+}
+
+.add-btn:hover {
+  background-color: #009bbf;
+}
+
+/* Calculate button */
+.calc-btn {
+  background-color: #007c99;
+}
+
+.calc-btn:hover {
+  background-color: #009bbf;
+}
+
+/* Remove button */
+.remove-btn {
+  background-color: crimson;
+}
+
+.remove-btn:hover {
+  background-color: darkred;
+}
+
+/* CGPA result */
+.cgpa-result {
+  color: #00bcd4;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.cgpa-result span {
+  font-size: 1.5rem;
+}

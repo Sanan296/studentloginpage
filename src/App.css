@@ -1,0 +1,22 @@
+/* Make sure the entire app takes full viewport height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+/* App container: vertically stretches full height */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push footer to bottom when content is short */
+.main-content {
+  flex: 1;
+}
+
+/* Optional: ensure footer always stays at the bottom */
+footer {
+  margin-top: auto;
+}

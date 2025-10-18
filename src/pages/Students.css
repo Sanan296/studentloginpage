@@ -1,0 +1,40 @@
+.students-page {
+  text-align: center;
+  padding: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.students-table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+
+.students-table th,
+.students-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.students-table th {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.view-btn, .delete-btn {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-btn {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.delete-btn {
+  background-color: crimson;
+  color: white;
+}

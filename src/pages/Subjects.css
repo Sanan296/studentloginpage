@@ -1,0 +1,23 @@
+.subjects-page {
+  text-align: center;
+  padding: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.subjects-page h2 {
+  color: #00bcd4;
+  margin-bottom: 20px;
+}
+
+.subjects-page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.subjects-page li {
+  background-color: #f7f7f7;
+  margin: 8px auto;
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+}

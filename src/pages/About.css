@@ -1,0 +1,63 @@
+.about-page {
+  background: linear-gradient(135deg, #f2f6ff, #e7f7ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-container {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 40px 50px;
+  box-shadow: 0 6px 12px rgba(0, 188, 212, 0.15);
+  max-width: 900px;
+  width: 100%;
+  color: #1e1e2f;
+}
+
+.about-container h1 {
+  text-align: center;
+  color: #00bcd4;
+  margin-bottom: 20px;
+}
+
+.about-container h2 {
+  color: #009bbf;
+  margin-top: 30px;
+}
+
+.about-container p {
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.intro {
+  text-align: justify;
+}
+
+.features-list,
+.tech-list {
+  margin-left: 25px;
+  color: #333;
+}
+
+.features-list li,
+.tech-list li {
+  margin-bottom: 10px;
+}
+
+strong {
+  color: #00bcd4;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 30px 20px;
+  }
+}
