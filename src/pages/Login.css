@@ -1,0 +1,31 @@
+.login-container {
+  text-align: center;
+  padding: 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.login-container input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login-container button:hover {
+  background-color: #009bbf;
+}

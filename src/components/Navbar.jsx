@@ -1,22 +1,3 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import "./Navbar.css";
-
-// const Navbar = () => {
-//   return (
-//     <nav className="navbar">
-//       <h2 className="logo">🎓 Student Management System</h2>
-//       <ul className="nav-links">
-//         <li><Link to="/">Home</Link></li>
-//         <li><Link to="/students">Students</Link></li>
-//         <li><Link to="/about">About</Link></li>
-//         <li><Link to="/contact">Contact</Link></li>
-//       </ul>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
@@ -24,41 +5,29 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2 className="logo">Student Management</h2>
+      <div className="nav-logo">
+        <span className="nav-icon">🎓</span>
+        <h2>Student Management System</h2>
+      </div>
+
       <ul className="nav-links">
-        <li>
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/students"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            Students
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            Contact
-          </NavLink>
-        </li>
+        <li><NavLink to="/home">Home</NavLink></li>
+        <li><NavLink to="/register">Register</NavLink></li>
+        <li><NavLink to="/students">Students</NavLink></li>
+        <li><NavLink to="/subjects">Subjects</NavLink></li>
+        <li><NavLink to="/cgpa">CGPA</NavLink></li>
+        <li><NavLink to="/About">About</NavLink></li>
       </ul>
+
+      <button
+        className="logout-btn"
+        onClick={() => {
+          localStorage.removeItem("isLoggedIn");
+          window.location.href = "/login";
+        }}
+      >
+        Logout
+      </button>
     </nav>
   );
 }

@@ -1,51 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Students.css";
 
 const Students = () => {
-  const [students, setStudents] = useState([
-    { id: 1, name: "Ali Khan", age: 21, grade: "A", course: "BSCS" },
-    { id: 2, name: "Ayesha Ahmed", age: 22, grade: "B+", course: "BBA" },
-    { id: 3, name: "Usman Tariq", age: 20, grade: "A", course: "BSSE" },
-    { id: 4, name: "Sara Malik", age: 23, grade: "A-", course: "BSIT" },
-    { id: 5, name: "Hassan Raza", age: 21, grade: "D", course: "BSCS" },
-  ]);
+  const [students, setStudents] = useState([]);
+
+  useEffect(() => {
+    const saved = JSON.parse(localStorage.getItem("students")) || [];
+    setStudents(saved);
+  }, []);
 
   const handleDelete = (id) => {
-    setStudents(students.filter((student) => student.id !== id));
+    const updated = students.filter((s) => s.id !== id);
+    setStudents(updated);
+    localStorage.setItem("students", JSON.stringify(updated));
   };
 
   return (
     <div className="students-page">
-      <h1>Students Page</h1>
-
+      <h1>Students List</h1>
       {students.length === 0 ? (
-        <p>No Data Found 😔</p>
+        <p>No students registered yet.</p>
       ) : (
         <table className="students-table">
           <thead>
             <tr>
               <th>Name</th>
-              <th>Age</th>
-              <th>Grade</th>
-              <th>Course</th>
+              <th>Roll No</th>
+              <th>Department</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
-            {students.map((student) => (
-              <tr key={student.id}>
-                <td>{student.name}</td>
-                <td>{student.age}</td>
-                <td>{student.grade}</td>
-                <td>{student.course}</td>
+            {students.map((s) => (
+              <tr key={s.id}>
+                <td>{s.name}</td>
+                <td>{s.roll}</td>
+                <td>{s.department}</td>
                 <td>
-                  <Link to={`/students/${student.id}`} state={{ student }}>
+                  <Link to={`/students/${s.id}`} state={{ student: s }}>
                     <button className="view-btn">View</button>
                   </Link>
-                  <button className="delete-btn" onClick={() => handleDelete(student.id)}>
-                    Delete
-                  </button>
+                  <button className="delete-btn" onClick={() => handleDelete(s.id)}>Delete</button>
                 </td>
               </tr>
             ))}

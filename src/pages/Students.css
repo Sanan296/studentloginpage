@@ -8,10 +8,10 @@
   width: 80%;
   margin: 30px auto;
   border-collapse: collapse;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.students-table th, .students-table td {
+.students-table th,
+.students-table td {
   border: 1px solid #ddd;
   padding: 12px;
 }
@@ -37,13 +37,4 @@
 .delete-btn {
   background-color: crimson;
   color: white;
-}
-.view-btn:hover {
-  background-color: #009bbf;
-}
-.delete-btn:hover {
-  background-color: darkred;
-}
-.students-table tr:nth-child(even) {
-  background-color: #f9f9f9;
 }

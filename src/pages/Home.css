@@ -1,12 +1,66 @@
-.home-container {
-  text-align: center;
-  background-color: #f2f6ff;
+.home-page {
+  background: linear-gradient(135deg, #f2f6ff, #e7f7ff);
   min-height: 100vh;
-  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   font-family: "Poppins", sans-serif;
 }
 
-.home-container h1 {
+.home-content {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  padding: 60px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 188, 212, 0.15);
+  width: 80%;
+  max-width: 700px;
+}
+
+.home-content h1 {
   color: #00bcd4;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.home-content p {
+  color: #333;
+  margin-bottom: 35px;
+  font-size: 1.05rem;
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  width: 60%;
+  margin: 0 auto;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.register-btn {
+  background-color: #00bcd4;
+}
+
+.subjects-btn {
+  background-color: #009bbf;
+}
+
+.cgpa-btn {
+  background-color: #007c99;
 }
