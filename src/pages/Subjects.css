@@ -1,23 +1,82 @@
-.subjects-page {
+.subjects-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 50px;
-  font-family: "Poppins", sans-serif;
 }
 
-.subjects-page h2 {
-  color: #00bcd4;
+.subjects-container h2 {
+  color: #222;
   margin-bottom: 20px;
 }
 
-.subjects-page ul {
-  list-style: none;
+.dropdown-container {
+  margin-bottom: 20px;
+}
+
+.dropdown-container select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.semester-section {
+  margin-top: 25px;
+}
+
+.semester-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.semester-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.semester-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.active-semester {
+  background-color: #28a745 !important;
+}
+
+.courses-section {
+  margin-top: 25px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.courses-section h4 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.courses-section ul {
+  list-style-type: none;
   padding: 0;
 }
 
-.subjects-page li {
-  background-color: #f7f7f7;
-  margin: 8px auto;
-  width: 300px;
-  padding: 10px;
-  border-radius: 5px;
+.courses-section li {
+  padding: 8px;
+  background: #0dbc56;
+  margin: 5px 0;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
 }

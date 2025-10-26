@@ -12,10 +12,9 @@ import RegisterStudent from "./pages/RegisterStudent";
 import Subjects from "./pages/Subjects";
 import CGPA from "./pages/CGPA";
 
-const App= () => {
+const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
-
   useEffect(() => {
     const loggedIn = localStorage.getItem("isLoggedIn") === "true";
     setIsLoggedIn(loggedIn);
@@ -45,7 +44,6 @@ const App= () => {
           <Route path="/about" element={<About />} />
         </Routes>
       </main>
-
       <Footer />
     </div>
   );

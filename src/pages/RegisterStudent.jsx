@@ -1,56 +1,55 @@
 import React, { useState } from "react";
+import { addStudent } from "../api/studentAPI";
 import "./RegisterStudent.css";
 
 const RegisterStudent = () => {
-  const [students, setStudents] = useState(
-    JSON.parse(localStorage.getItem("students")) || []
-  );
-  const [student, setStudent] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     roll: "",
-    department: "",
+    department: ""
   });
 
   const handleChange = (e) => {
-    setStudent({ ...student, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleRegister = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const newStudents = [...students, { ...student, id: Date.now() }];
-    setStudents(newStudents);
-    localStorage.setItem("students", JSON.stringify(newStudents));
-    setStudent({ name: "", roll: "", department: "" });
-  };
-
-  const handleDelete = (id) => {
-    const updated = students.filter((s) => s.id !== id);
-    setStudents(updated);
-    localStorage.setItem("students", JSON.stringify(updated));
+    try {
+      await addStudent(formData);
+      alert("✅ Student Registered Successfully!");
+      setFormData({ name: "", roll: "", department: "" });
+    } catch (err) {
+      console.error("Error adding student:", err);
+      alert("❌ Failed to register student");
+    }
   };
 
   return (
-    <div className="register-page">
-      <h2>Register New Student</h2>
-      <form onSubmit={handleRegister}>
+    <div className="register-container">
+      <h2>Register Student</h2>
+      <form onSubmit={handleSubmit} className="register-form">
         <input
+          type="text"
           name="name"
-          placeholder="Name"
-          value={student.name}
+          placeholder="Enter Student Name"
+          value={formData.name}
           onChange={handleChange}
           required
         />
         <input
+          type="text"
           name="roll"
-          placeholder="Roll No"
-          value={student.roll}
+          placeholder="Enter Roll No"
+          value={formData.roll}
           onChange={handleChange}
           required
         />
         <input
+          type="text"
           name="department"
-          placeholder="Department"
-          value={student.department}
+          placeholder="Enter Department"
+          value={formData.department}
           onChange={handleChange}
           required
         />
